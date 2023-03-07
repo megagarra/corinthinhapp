@@ -30,17 +30,11 @@
     ],
     "buildpacks": [
       {
-        "url": "heroku/go"
+        "url": "https://github.com/heroku/corinthinhapp.git"
       }
     ],
     "scripts": {
       "test": "go test ./..."
-    },
-    "env": {
-      "DATABASE_URL": {
-        "description": "The URL of the database connection",
-        "required": true
-      }
     },
     "formation": {
       "web": {
@@ -48,5 +42,6 @@
         "size": "free"
       }
     }
+    
   }
   
