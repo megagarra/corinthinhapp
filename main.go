@@ -15,11 +15,9 @@ import (
 )
 
 const (
-    DBHost     = "DATABASE_HOST"
-    DBPort     = "DATABASE_PORT"
-    DBUser     = "DATABASE_USER"
-    DBPassword = "DATABASE_PASSWORD"
-    DBName     = "DATABASE_NAME"
+    DBHost     = "v9qnbt.stackhero-network.com"
+    DBPassword = "oebRfVke90yUGszlEgaW0c3dOjM47fpx"
+
 )
 
 var db *sql.DB
@@ -32,12 +30,9 @@ type Player struct {
 }
 
 func init() {
-    dsn := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=require",
+    dsn := fmt.Sprintf("host=%s password=%s",
         os.Getenv(DBHost),
-        os.Getenv(DBPort),
-        os.Getenv(DBUser),
         os.Getenv(DBPassword),
-        os.Getenv(DBName),
     )
 
     var err error
